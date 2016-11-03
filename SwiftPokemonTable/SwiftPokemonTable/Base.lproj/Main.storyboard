@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="meN-q3-f3K">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top Table View Controller-->
+        <scene sceneID="1Pa-yW-XBh">
+            <objects>
+                <tableViewController id="Azl-3H-2mL" customClass="TopTableViewController" customModule="SwiftPokemonTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cf5-vW-bRa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="xIe-ol-bOi" detailTextLabel="H9a-Xk-BbX" rowHeight="95" style="IBUITableViewCellStyleSubtitle" id="5js-mj-CtR">
+                                <rect key="frame" x="0.0" y="92" width="375" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5js-mj-CtR" id="pzm-sO-4op">
+                                    <frame key="frameInset" width="375" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xIe-ol-bOi">
+                                            <frame key="frameInset" minX="15" minY="29" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H9a-Xk-BbX">
+                                            <frame key="frameInset" minX="15" minY="50" width="44" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Azl-3H-2mL" id="IGe-mb-XQx"/>
+                            <outlet property="delegate" destination="Azl-3H-2mL" id="J4Q-UJ-gCj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dqK-KE-96j"/>
+                    <connections>
+                        <segue destination="DNf-Tc-Cyt" kind="push" identifier="test" id="0Sh-kz-8NA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWO-HN-9f0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.8" y="123.68815592203899"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="oUX-X0-zhT">
+            <objects>
+                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DNf-Tc-Cyt" customClass="NextViewController" customModule="SwiftPokemonTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EjY-p7-f80"/>
+                        <viewControllerLayoutGuide type="bottom" id="ev3-OE-so5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lp7-3U-mzX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shibahu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KGt-K6-zKb"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBn-PA-x2n">
+                                <frame key="frameInset" minX="123" minY="410" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ball.png"/>
+                                <connections>
+                                    <segue destination="BGO-B3-HEc" kind="presentation" id="PmQ-zo-ZeG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ポケモン地図" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3v-Th-S8D">
+                                <frame key="frameInset" minY="139" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KGt-K6-zKb" secondAttribute="trailing" id="LK7-iF-v3r"/>
+                            <constraint firstItem="ev3-OE-so5" firstAttribute="top" secondItem="KGt-K6-zKb" secondAttribute="bottom" id="M5R-3l-vAG"/>
+                            <constraint firstItem="KGt-K6-zKb" firstAttribute="leading" secondItem="Lp7-3U-mzX" secondAttribute="leading" id="dw5-jE-QyI"/>
+                            <constraint firstItem="KGt-K6-zKb" firstAttribute="top" secondItem="EjY-p7-f80" secondAttribute="bottom" id="oTn-p8-Zt1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ywn-uI-5Qv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CoF-Xd-Lhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885.5999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="a4K-4k-AEN">
+            <objects>
+                <viewController id="BGO-B3-HEc" customClass="WebViewController" customModule="SwiftPokemonTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kn9-Zf-fww"/>
+                        <viewControllerLayoutGuide type="bottom" id="i8W-Gm-Vqr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7cN-vg-7LU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-x5-OIN">
+                                <items>
+                                    <barButtonItem title="戻る" id="c1M-nG-II8">
+                                        <connections>
+                                            <action selector="back:" destination="BGO-B3-HEc" id="lXJ-ee-QLX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuX-Ux-INy">
+                                <frame key="frameInset" minX="-15" minY="160" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jP-0H-pn1">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i8W-Gm-Vqr" firstAttribute="top" secondItem="7jP-0H-pn1" secondAttribute="bottom" id="6Va-ls-xXy"/>
+                            <constraint firstItem="NyR-x5-OIN" firstAttribute="leading" secondItem="7cN-vg-7LU" secondAttribute="leading" id="6hS-Lm-pNP"/>
+                            <constraint firstAttribute="trailing" secondItem="NyR-x5-OIN" secondAttribute="trailing" id="7y5-Mz-j2k"/>
+                            <constraint firstItem="7jP-0H-pn1" firstAttribute="leading" secondItem="7cN-vg-7LU" secondAttribute="leading" id="E5X-Nj-oUK"/>
+                            <constraint firstAttribute="trailing" secondItem="7jP-0H-pn1" secondAttribute="trailing" id="G9E-jY-jnR"/>
+                            <constraint firstItem="NyR-x5-OIN" firstAttribute="top" secondItem="Kn9-Zf-fww" secondAttribute="bottom" id="PvK-jZ-Sj3"/>
+                            <constraint firstItem="7jP-0H-pn1" firstAttribute="top" secondItem="NyR-x5-OIN" secondAttribute="bottom" id="Ql1-Az-T7A"/>
+                            <constraint firstItem="7jP-0H-pn1" firstAttribute="top" secondItem="NyR-x5-OIN" secondAttribute="bottom" id="Sp8-bE-ypX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="7jP-0H-pn1" id="Vhn-io-UCv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebq-X2-tdh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3728.8000000000002" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kwV-ge-a1I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="meN-q3-f3K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DXq-ZL-nG7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Azl-3H-2mL" kind="relationship" relationship="rootViewController" id="qpU-MD-JDS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiC-yu-bY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.60000000000002" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball.png" width="128" height="128"/>
+        <image name="shibahu.jpg" width="1280" height="847"/>
+    </resources>
+</document>
